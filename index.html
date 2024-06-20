@@ -13,12 +13,25 @@
         rel="stylesheet">
 </head>
 
+<style>
+    .myImage {
+        width: 500px;
+        height: 500px;
+        background-image: url('istockphoto-1324093361-612x612 1.png');
+    
+    }
+</style>
+
 <body>
     <div class="main">
 
-        
+
         <div class="flower">
-           
+
+            <div class="flower_image">
+                <div class="myImage" style="background-size: contain;"> </div>
+            </div>
+
 
             <div class="small_tital">
                 <div class="inner_small_tital">
@@ -58,20 +71,20 @@
 
             <div class="pictures">
 
-                <div class="smoothies1">
+                <div class="smoothies1" onclick="cherry()">
 
                 </div>
-                <div class="smoothies2">
+                <div class="smoothies2" onclick="mango()">
 
                 </div>
-                <div class="smoothies3">
+                <div class="smoothies3" onclick="apple()">
 
                 </div>
-                <div class="smoothies4">
+                <div class="smoothies4" onclick="grapes()">
 
                 </div>
             </div>
-            
+
         </div>
 
         <div class="flower2">
@@ -94,6 +107,57 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+        var main = document.querySelector('.main');
+        var myImage = document.querySelector('.myImage');
+        var rotate = document.querySelector('.rotate');
+        var flower = document.querySelector('.flower');
+
+
+        function mango() {
+            main.style.background = 'pink';
+            myImage.style.backgroundImage = 'url(image2.png)';
+            myImage.style.opacity = 0.5;
+            rotate.style.transform = 'rotate(252deg)'
+            rotate.style.background = 'rgba(255, 113, 164, 1)';
+            flower.style.backgroundImage = 'url(pinkstar.png)';
+
+        }
+
+        function cherry() {
+            main.style.background = 'rgba(255, 211, 103, 1)';
+            myImage.style.backgroundImage = 'url(mango.png)';
+            myImage.style.opacity = 0.5;
+            rotate.style.transform = 'rotate(349deg)'
+            rotate.style.background = 'rgba(252, 179, 0, 1)';
+            flower.style.backgroundImage = 'url(yellowstar.png)';
+        }
+
+        function apple() {
+            main.style.background = 'rgba(194, 234, 126, 1)';
+            myImage.style.backgroundImage = 'url(Kiwi_vector.png)';
+            myImage.style.opacity = 0.5;
+            rotate.style.transform = 'rotate(168deg)'
+            rotate.style.background = 'rgba(151, 208, 57, 1)';
+            flower.style.backgroundImage = 'url(greenstar.png)';
+        }
+
+
+        function grapes() {
+            main.style.background = 'rgba(141, 185, 244, 1)';
+            myImage.style.backgroundImage = 'url(Blue_Berry.png)';
+            myImage.style.opacity = 0.5;
+            rotate.style.transform = 'rotate(73deg)'
+            rotate.style.background = 'rgba(74, 156, 244, 1)';
+            flower.style.backgroundImage = 'url(bluestar.png)';
+        }
+
+
+
+    </script>
+
 </body>
 
 </html>
